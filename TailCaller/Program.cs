@@ -23,7 +23,11 @@ namespace TailCaller
             }
 
 
-            public override T Eval() => t;
+            public override T Eval()
+            {
+                return t;
+            }
+
             public override bool IsSuspend()
             {
                 return false;
@@ -89,6 +93,7 @@ namespace TailCaller
         public static void Main(string[] args)
         {
             BigInteger sum = Sum(500000000000);
+            
             Console.WriteLine(sum);
         }
     }
